@@ -10,7 +10,7 @@ SRServer.use(cors())
 SRServer.use(express.json())
 SRServer.use(router)
 
-const PORT=3000
+const PORT=3000 || process.env.PORT
 SRServer.listen(PORT,()=>{
     console.log("SR server connected to",PORT);
 })
